@@ -3,19 +3,12 @@ import { AppTitle } from "../components/AppTitle";
 import { CountriesSelector } from "../components/CountriesSelector";
 import { OneDayCard } from "../components/OneDayCard";
 import { oneCountryInfect } from "../feature/infect";
+import { formatDate } from "../utils/dateFormat";
 
 export const InfectedSingleCountry = () => {
   const [slug, setSlug] = useState("japan");
   const [infectData, setInfectData] = useState<oneCountryInfect | undefined>();
 
-  // 日付をYYYY-MM-DDの書式で返すメソッド
-  function formatDate(date: string) {
-    const dt = new Date(date);
-    const y = dt.getFullYear();
-    const m = ("00" + (dt.getMonth() + 1)).slice(-2);
-    const d = ("00" + dt.getDate()).slice(-2);
-    return y + "-" + m + "-" + d;
-  }
   useEffect(() => {
     const fetchData = async () => {
       try {
