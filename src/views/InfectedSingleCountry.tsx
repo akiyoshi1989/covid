@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { AppTitle } from "../components/AppTitle";
 import { CountriesSelector } from "../components/CountriesSelector";
 import { OneDayCard } from "../components/OneDayCard";
-import { oneCountryInfect } from "../feature/infect";
+import { OneCountryInfect } from "../feature/infect";
 import { formatDate } from "../utils/dateFormat";
 
 export const InfectedSingleCountry = () => {
   const [slug, setSlug] = useState("japan");
-  const [infectData, setInfectData] = useState<oneCountryInfect | undefined>();
+  const [infectData, setInfectData] = useState<OneCountryInfect | undefined>();
 
   useEffect(() => {
     const fetchData = async () => {

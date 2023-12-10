@@ -1,8 +1,8 @@
-import { infectWorld } from "../feature/infect";
+import { WorldInfect } from "../feature/infect";
 import { formatDate } from "../utils/dateFormat";
 
 type WorldCardProps = {
-  infectData: infectWorld;
+  infectData: WorldInfect;
 };
 
 export const WorldCard: React.FC<WorldCardProps> = ({ infectData }) => {

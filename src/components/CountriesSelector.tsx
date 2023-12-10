@@ -13,10 +13,9 @@ export const CountriesSelector: React.FC<CountriesSelectorProps> = ({
   setSlug,
 }) => {
   const counties: countiesList = JSON.parse(JSON.stringify(countiesList));
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSlug(e.target.value);
   };
-  console.log(counties);
 
   return (
     <div>

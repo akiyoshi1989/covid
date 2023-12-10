@@ -1,10 +1,10 @@
-import { oneCountryInfect } from "../feature/infect";
+import { OneCountryInfect } from "../feature/infect";
 
-type oneDayCardProps = {
-  infectData: oneCountryInfect;
+type OneDayCardProps = {
+  infectData: OneCountryInfect;
 };
 
-export const OneDayCard: React.FC<oneDayCardProps> = ({ infectData }) => {
+export const OneDayCard: React.FC<OneDayCardProps> = ({ infectData }) => {
   return (
     <div>
       <p>日付：{infectData.Date}</p>

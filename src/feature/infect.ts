@@ -1,4 +1,4 @@
-export type infect = {
+export type InfectResponse = {
   Active: number;
   Confirmed: number;
   Country: string;
@@ -12,18 +12,18 @@ export type infect = {
   Recovered: number;
 };
 
-export type oneCountryInfect = Pick<
-  infect,
+export type OneCountryInfect = Pick<
+  InfectResponse,
   "Confirmed" | "Date" | "Recovered"
 > &
-  toDayInfect;
+  TodayInfect;
 
-type toDayInfect = {
+type TodayInfect = {
   todayConfirmed: number;
   todayRecovered: number;
 };
 
-export type worldInfect = {
+export type WorldInfectResponse = {
   ID: string;
   Country: string;
   CountryCode: string;
@@ -38,7 +38,7 @@ export type worldInfect = {
   Premium: any;
 };
 
-export type infectWorld = Pick<
-  worldInfect,
+export type WorldInfect = Pick<
+  WorldInfectResponse,
   "Country" | "Date" | "TotalConfirmed" | "TotalRecovered"
 >;
